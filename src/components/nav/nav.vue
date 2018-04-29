@@ -22,6 +22,7 @@
 <script>
 	export default{
 		name:'w-nav',
+		props:['str'],
 		data(){
 			return{
 				list:[]
