@@ -8,13 +8,16 @@
 </template>
 
 <script>
-//const wNav = ()=>import('@/components/nav/nav')
+const wNav = ()=>import('@/components/nav/nav')
 export default {
   name: 'App',
   data(){
   	return{
   		list:[1,2]
   	}
+  },
+  components:{
+  	wNav
   }
 }
 </script>

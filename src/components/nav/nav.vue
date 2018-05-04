@@ -31,7 +31,7 @@
 	}
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .w-nav{
 	position:fixed;
 	left:0;bottom:0;
@@ -45,6 +45,7 @@
 .nav-item{
 	display: flex;
 	width:.8rem;
+	margin-right:.1rem;
 	height:100%;
 	justify-content: center;
 	flex-direction: column;
