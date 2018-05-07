@@ -35,11 +35,15 @@ cnpm install --save-dev node-sass
 ```
 
 # 使用axios发起请求
+```
 npm install axios
+```
 
 # 使用vuex
+``` bash
 npm install vuex
 # vuex 依赖promise  安装es6-promise 或者 cdn引入（推荐）
 npm install es6-promise --save
 <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script>
+```
 
