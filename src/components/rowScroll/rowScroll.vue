@@ -15,7 +15,15 @@
 			showMe(index){
 				var rows = document.getElementById("rows")
 				this.$emit('changeIndex',index)
-				rows.scrollTo(event.target.offsetLeft,0)
+				rows.scrollTo(event.target.offsetLeft,0);
+				
+				this.$axios.get('/index/index',{
+					params:{
+						index:index
+					}
+				}).then((res)=>{
+					console.log(res)
+				})
 			}
 		}
 	}

@@ -16,7 +16,7 @@ const	routes = [
 ]
 
 const router = new Router({
-	mode:"hash",
+	mode:"history",
 	routes,
 	scrollBehavior (to, from, savedPosition) {
     console.log(savedPostion)
