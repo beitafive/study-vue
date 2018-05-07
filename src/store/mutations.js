@@ -11,3 +11,4 @@ const mutations = {
 		state.globalIndex = data
 	}
 }
+export default mutations;

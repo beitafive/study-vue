@@ -11,6 +11,7 @@
 		<router-link tag="div" to="/shopcart" class="nav-item">
 			<i class="iconfont">&#xe607;</i>
 			购物车
+			<span>{{shopIndex}}</span>
 		</router-link>
 		<router-link tag="div" to="/mine" class="nav-item">
 			<i class="iconfont">&#xe636;</i>
@@ -26,6 +27,11 @@
 		data(){
 			return{
 				list:[]
+			}
+		},
+		computed:{
+			shopIndex(){
+				return this.$store.getters.getGlobalIndex;
 			}
 		}
 	}
@@ -43,6 +49,7 @@
 	background:#f5f5f5;
 }
 .nav-item{
+	position:relative;
 	display: flex;
 	width:.8rem;
 	margin-right:.1rem;
@@ -57,5 +64,17 @@
 }
 .router-link-exact-active{
 	color:#3D9BE8
+}
+.nav-item span{
+	display: block;
+	position: absolute;
+	top:0;right:0;
+	width:.4rem;height:.4rem;
+	border-radius:100%;
+	background:#42B983;
+	color:#fff;
+	font-size:.24rem;
+	text-align:center;
+	line-height:.4rem;
 }
 </style>

@@ -8,3 +8,5 @@
 const getters = {
 	getGlobalIndex : state => state.globalIndex
 }
+
+export default getters;

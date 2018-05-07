@@ -19,8 +19,10 @@ const router = new Router({
 	mode:"history",
 	routes,
 	scrollBehavior (to, from, savedPosition) {
-    console.log(savedPostion)
-  }
+// 	if(to.name == 'shopcart'){
+// 		return {x:0,y:100}
+// 	}
+ 	} 
 });
 router.beforeEach((to,from,next)=>{
 	//可以做登录拦截。 需要登录的路由后面加上requireAuth:true 就可以

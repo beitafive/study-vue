@@ -7,6 +7,8 @@
 
 const actions = {
 	getGlobalIndex:(context,data)=>{
-		context.commit('GETGLOBALINDEX')
+		context.commit('GETGLOBALINDEX',data)
 	}
 }
+
+export default actions;

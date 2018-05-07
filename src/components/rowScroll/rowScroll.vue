@@ -16,13 +16,15 @@
 				var rows = document.getElementById("rows")
 				this.$emit('changeIndex',index)
 				rows.scrollTo(event.target.offsetLeft,0);
-				
-				this.$axios.get('/index/index',{
+				this.$store.dispatch('getGlobalIndex',index).then(()=>{
+					// do soming;
+				})
+				this.$axios.get('/api/index/getlist',{
 					params:{
 						index:index
 					}
 				}).then((res)=>{
-					console.log(res)
+//					console.log(res)
 				})
 			}
 		}
