@@ -22,6 +22,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 
 # 安装sass并且使用sass
+``` bash
 npm install --save-dev sass-loader
 # 用cnpm下载node-sass 因为网络原因，npm会失败
 cnpm install --save-dev node-sass
@@ -31,6 +32,7 @@ cnpm install --save-dev node-sass
   loaders: ['style', 'css', 'sass']
 }
 # 最后在vue文件中的style标签 增加 lang="scss" 即可
+```
 
 # 使用axios发起请求
 npm install axios
