@@ -14,7 +14,7 @@ axios.interceptors.response.use(function(response){
 },function(err){
 	console.log(err)
   //Do something with response error
-  return Promise.reject(error);
+  return Promise.reject(err);
 });
 
 export default axios;
