@@ -11,7 +11,7 @@
 		<router-link tag="div" to="/shopcart" class="nav-item">
 			<i class="iconfont">&#xe607;</i>
 			购物车
-			<span>{{shopIndex}}</span>
+			<span v-has="shopIndex>3">{{shopIndex}}</span>
 		</router-link>
 		<router-link tag="div" to="/mine" class="nav-item">
 			<i class="iconfont">&#xe636;</i>
