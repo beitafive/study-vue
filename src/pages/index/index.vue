@@ -41,13 +41,13 @@
 		methods:{
 			checkCard(index){
 				this.typeIndex = index;
-//				this.$axios.get('/api/index/getlist',{
-//					params:{
-//						index:index
-//					}
-//				}).then((res)=>{
-////					console.log(res)
-//				})
+				this.$axios.get('/api/index/getlist',{
+					params:{
+						index:index
+					}
+				}).then((res)=>{
+//					console.log(res)
+				})
 			}
 		}
 	}
