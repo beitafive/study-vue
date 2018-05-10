@@ -10,7 +10,6 @@
 				</span>
 		</span>
 		</span>
-
 	</div>
 </template>
 
@@ -38,17 +37,14 @@
 		},
 		beforeMount() {
 			this.typeIndex = +sessionStorage.item_index || 0;
+			this.$http.get('/api/index/getlist',{index:1},1).then((res)=>{
+				console.log(res)
+			})
 		},
 		methods: {
 			checkCard(index) {
 				this.typeIndex = index;
-//				this.$axios.get('/api/index/getlist', {
-//					params: {
-//						index: index
-//					}
-//				}).then((res) => {
-//					//					console.log(res)
-//				})
+				
 			}
 		}
 	}

@@ -8,6 +8,9 @@
 const actions = {
 	getGlobalIndex:(context,data)=>{
 		context.commit('GETGLOBALINDEX',data)
+	},
+	loading:(context,data)=>{
+		context.commit('LOADING',data)
 	}
 }
 

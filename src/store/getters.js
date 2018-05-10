@@ -6,7 +6,8 @@
 * * */
 
 const getters = {
-	getGlobalIndex : state => state.globalIndex
+	getGlobalIndex : state => state.globalIndex,
+	loading : state => state.loading
 }
 
 export default getters;

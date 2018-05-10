@@ -5,6 +5,7 @@
 
 
 const state = {
-	globalIndex:0
+	globalIndex:0,
+	loading:false
 }
 export default state;

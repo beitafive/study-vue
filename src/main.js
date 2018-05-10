@@ -4,13 +4,13 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store/store'
-import axios from './http'
+import http from './http'
 import vHas from './directive/vhas'
 
-Vue.prototype.$axios = axios;
+Vue.prototype.$http = http;
+
 Vue.use(vHas)
 Vue.config.productionTip = false;
-//自定义指令  效果同v-if v-show一样
 
 
 /* eslint-disable no-new */

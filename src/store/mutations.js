@@ -9,6 +9,9 @@
 const mutations = {
 	GETGLOBALINDEX:(state,data)=>{
 		state.globalIndex = data
+	},
+	LOADING:(state,data)=>{
+		state.loading = data
 	}
 }
 export default mutations;
