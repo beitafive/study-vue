@@ -50,7 +50,7 @@
 		mounted(){
 			var rows = document.getElementById(this.box_id)
 			this.Vscroll = new Iscroll(rows,this.config)
-			this.iscrollGo()
+			this.iscrollGo(this.typeIndex)
 		},
 		methods:{
 			showMe(index){
@@ -66,7 +66,7 @@
 				//首先获取父元素
 				let uls = document.getElementById(this.wrapper_id);
 				//获取子元素下标     
-				let ind = index || +sessionStorage.item_index;
+				let ind = index;
 				//获取子元素     ****子元素也就是当前选中的标签
 				let slide = uls.children[ind];
 				//获取子元素的 offsetLeft

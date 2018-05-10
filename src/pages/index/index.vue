@@ -35,7 +35,7 @@
 		components:{
 			rowScroll
 		},
-		created(){
+		beforeMount(){
 			this.typeIndex = +sessionStorage.item_index || 0;
 		},
 		methods:{
