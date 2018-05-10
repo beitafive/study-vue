@@ -51,6 +51,7 @@
 			var rows = document.getElementById(this.box_id)
 			this.Vscroll = new Iscroll(rows,this.config)
 			this.iscrollGo(this.typeIndex)
+			this.$store.dispatch('getGlobalIndex',this.typeIndex)
 		},
 		methods:{
 			showMe(index){
