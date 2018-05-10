@@ -10,7 +10,7 @@ import store from './store/store'
 var num = 0;
 axios.interceptors.request.use(function (config) {  //在请求发出之前进行一些操作
 	if(config.params.loading){
-		store.dispatch('loading',true)
+		store.dispatch('loading',true);
 		num++		
 	}
   return config
