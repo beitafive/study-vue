@@ -39,7 +39,7 @@ axios.interceptors.response.use(function(response){
  * load：判断是否页面加载中时的请求
  * **/
 const http = {
-	get:(url,params,load)=>{
+	get:(url,params,load=false)=>{
 		if(load){
 			params = {...params,loading:1}
 		}
@@ -47,7 +47,7 @@ const http = {
 			params:params
 		})
 	},
-	post:(url,params,load)=>{
+	post:(url,params,load=false)=>{
 		if(load){
 			params = {...params,loading:1}
 		}

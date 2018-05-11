@@ -44,7 +44,6 @@
 		methods: {
 			checkCard(index) {
 				this.typeIndex = index;
-				
 			}
 		}
 	}
