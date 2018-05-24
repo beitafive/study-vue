@@ -1,5 +1,5 @@
 <template>
-	<div class="page-load" v-has="loading">
+	<div class="page-load">
 		<img src="../../../static/jump.gif" />
 		<p>加载中</p>
 	</div>
@@ -7,12 +7,7 @@
 
 <script>
 	export default{
-		name:'pageLoad',
-		computed:{
-	  	loading(){
-	  		return this.$store.getters.loading
-	  	}
-		}
+		name:'pageLoad'
 	}
 </script>
 

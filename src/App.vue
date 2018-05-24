@@ -1,16 +1,17 @@
 <template>
   <div id="app">
   	<transition name="fade">
-	    <router-view/>
+	    <router-view v-has="!loading"/>
   	</transition>
-  	<w-nav></w-nav>
-  	<page-load></page-load>
+  	<w-nav v-has="!loading"></w-nav>
+  	<!--<page-load v-has="loading"></page-load>-->
   </div>
 </template>
 
 <script>
 const wNav = ()=>import('@/components/nav/nav')
-const pageLoad = ()=>import('@/components/loading/pageLoad')
+import pageLoad from '@/components/loading/pageLoad'
+
 export default {
   name: 'App',
   data(){
@@ -18,6 +19,11 @@ export default {
   		list:[1,2]
   	}
   },
+  computed:{
+  	loading(){
+  		return this.$store.getters.loading
+  	}
+	},
   components:{
   	wNav,pageLoad
   }

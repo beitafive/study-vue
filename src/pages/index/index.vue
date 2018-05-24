@@ -2,18 +2,16 @@
 	<div>
 		<!-- component 也可以当做组件标签，标签属性is来确定调用组件  -->
 		<component is="rowScroll" :list="list" :typeIndex="typeIndex" @rowChange="checkCard" :config="config" box_id="rows" wrapper_id="rows-child"></component>
-		<span v-has="typeIndex>5">首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页首页
-			<span v-has="typeIndex>5">
-				男衣','女衣','男裤','女裤','袜子','春夏款','秋冬款','爆款'
-				<span v-has="typeIndex>5">
-				男衣','女衣','男裤','女裤','袜子','春夏款','秋冬款','爆款'
-				</span>
-		</span>
-		</span>
+		<transition-group tag="div" name="list-go">
+			<div v-for="item in list" :key="item">
+				{{item}}
+			</div>
+		</transition-group>
 	</div>
 </template>
 
 <script>
+	import {shuffle} from 'lodash';
 	import rowScroll from '@/components/rowScroll/rowScroll'
 	export default {
 		name: 'index',
@@ -43,12 +41,15 @@
 		},
 		methods: {
 			checkCard(index) {
+				this.list = shuffle(this.list)
 				this.typeIndex = index;
 			}
 		}
 	}
 </script>
 
-<style>
-
+<style scoped>
+	.list-go-move{
+		transition:transform 1s;
+	}
 </style>

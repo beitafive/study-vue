@@ -1,7 +1,7 @@
 <template>
 	<div class="rowScroll" :id="box_id">
 		<div :id="wrapper_id" class="row-iscroll" :style="{width:list.length*1.5+1+'rem'}">
-			<div v-for="(item,index) in list" :key="index" :style="{background:index==typeIndex?'red':''}" @click="showMe(index)">
+			<div  v-for="(item,index) in list" :key="index" :style="{background:index==typeIndex?'red':''}" @click="showMe(index)">
 				{{item}}
 			</div>
 		</div>
@@ -9,6 +9,7 @@
 </template>
 
 <script>
+	
 	import Iscroll from 'iscroll';
 	export default{
 		name:'rowScroll',
@@ -109,6 +110,9 @@
 				height:100%;
 				line-height:.8rem;
 				text-align: center;
+				transition: all .3s;
+				background:#3D9BE8;
+				margin:0 2px;
 			}
 		}
 	}
