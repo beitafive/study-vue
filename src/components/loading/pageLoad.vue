@@ -21,7 +21,7 @@
 		background:#fff;
 		img{
 			display: block;
-			margin:4rem auto .1rem;
+			margin:30% auto .1rem;
 		}
 		p{
 			text-align: center;

@@ -9,8 +9,8 @@ import store from './store/store'
 
 var num = 0;
 axios.interceptors.request.use(function (config) {  //在请求发出之前进行一些操作
+	console.log(config)
 	if(config.params.loading){
-		store.dispatch('loading',true);
 		num++		
 	}
   return config
@@ -18,9 +18,9 @@ axios.interceptors.request.use(function (config) {  //在请求发出之前进�
 axios.interceptors.response.use(function(response){
 	if(response.config.params.loading)num--;
 	if(num <= 0){
-		setTimeout(()=>{
-			store.dispatch('loading',false)			
-		},300)
+//		setTimeout(()=>{
+//			store.dispatch('loading',false)			
+//		},300)
 	}
   if(response.status == 403){	// 一般就是未被服务器信任  也就是需要重新登录
   	router.push('/login') //去登录页

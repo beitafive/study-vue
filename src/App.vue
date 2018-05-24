@@ -1,10 +1,10 @@
 <template>
   <div id="app">
   	<transition name="fade">
-	    <router-view v-has="!loading"/>
+	    <router-view/>
   	</transition>
-  	<w-nav v-has="!loading"></w-nav>
-  	<!--<page-load v-has="loading"></page-load>-->
+  	<w-nav></w-nav>
+  	<page-load v-has="loading"></page-load>
   </div>
 </template>
 
@@ -23,7 +23,7 @@ export default {
   	loading(){
   		return this.$store.getters.loading
   	}
-	},
+  },
   components:{
   	wNav,pageLoad
   }

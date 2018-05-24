@@ -1,6 +1,6 @@
 import Vue from 'vue'
+import store from '../store/store'
 import Router from 'vue-router'
-//import index from '@/pages/index/index'
 const index = ()=>import('@/pages/index/index')
 const active = ()=>import('@/pages/active/active')
 const shopcart = ()=>import('@/pages/shopcart/shopcart')
@@ -31,6 +31,10 @@ router.beforeEach((to,from,next)=>{
 	if(to.matched.some(r => r.meta.requireAuth)){
 		
 	}
+	store.dispatch('loading',true)
+	setTimeout(()=>{
+		store.dispatch('loading',false)
+	},500)
 	document.title = to.meta.title
 	next();
 })
