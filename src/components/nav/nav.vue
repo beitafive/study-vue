@@ -23,11 +23,19 @@
 <script>
 	export default{
 		name:'w-nav',
-		props:['str'],
+		props:{
+			str:{
+				type:String,
+				default:'wuzhaoqian'
+			}
+		},
 		data(){
 			return{
 				list:[]
 			}
+		},
+		mounted(){
+			console.log(this)
 		},
 		computed:{
 			shopIndex(){

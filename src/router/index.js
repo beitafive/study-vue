@@ -11,7 +11,7 @@ Vue.use(Router)
 
 const	routes = [
   {path:'/',name:'index',component:index,meta:{title:'首页',requireAuth:true}},
-  {path:'/active',name:'active',component:active,meta:{title:'活动页'}},
+  {path:'/active/a',name:'active',component:active,meta:{title:'活动页'}},
   {path:'/shopcart',name:'shopcart',component:shopcart,meta:{title:'购物车'}},
   {path:'/mine',name:'mine',component:mine,meta:{title:'我的'}},
   {path:'/email',name:'email',component:email,meta:{title:'邮件'}},
@@ -20,6 +20,7 @@ const	routes = [
 const router = new Router({
 	mode:"history",
 	routes,
+	base:'/app/',
 	scrollBehavior (to, from, savedPosition) {
 // 	if(to.name == 'shopcart'){
 // 		return {x:0,y:100}
@@ -31,6 +32,7 @@ router.beforeEach((to,from,next)=>{
 	if(to.matched.some(r => r.meta.requireAuth)){
 		
 	}
+	console.log(to)
 	document.title = to.meta.title
 	next();
 })
