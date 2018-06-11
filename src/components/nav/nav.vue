@@ -4,7 +4,7 @@
 			<i class="iconfont">&#xe611;</i>
 			首页
 		</router-link>
-		<router-link tag="div" to="/active" class="nav-item">
+		<router-link tag="div" to="/active" class="nav-item" replace>
 			<i class="iconfont">&#xe60a;</i>
 			活动
 		</router-link>

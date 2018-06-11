@@ -8,6 +8,13 @@ import http from './http'
 import vHas from './directive/vhas'
 
 Vue.prototype.$http = http;
+Vue.mixin({
+	created:function(){	
+		if(this.$route.meta.title){
+			document.title = this.$route.meta.title;			
+		}
+	}
+})
 
 Vue.use(vHas)
 Vue.config.productionTip = false;

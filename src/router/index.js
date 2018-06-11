@@ -11,7 +11,7 @@ Vue.use(Router)
 
 const	routes = [
   {path:'/',name:'index',component:index,meta:{title:'首页',requireAuth:true}},
-  {path:'/active/a',name:'active',component:active,meta:{title:'活动页'}},
+  {path:'/active',name:'active',component:active,meta:{title:'活动页'}},
   {path:'/shopcart',name:'shopcart',component:shopcart,meta:{title:'购物车'}},
   {path:'/mine',name:'mine',component:mine,meta:{title:'我的'}},
   {path:'/email',name:'email',component:email,meta:{title:'邮件'}},
@@ -33,7 +33,7 @@ router.beforeEach((to,from,next)=>{
 		
 	}
 	console.log(to)
-	document.title = to.meta.title
+//	document.title = to.meta.title
 	next();
 })
 
