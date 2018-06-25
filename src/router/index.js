@@ -20,7 +20,7 @@ const	routes = [
 const router = new Router({
 	mode:"history",
 	routes,
-	base:'/app/',
+	base:'/app.html/',
 	scrollBehavior (to, from, savedPosition) {
 // 	if(to.name == 'shopcart'){
 // 		return {x:0,y:100}
@@ -32,7 +32,6 @@ router.beforeEach((to,from,next)=>{
 	if(to.matched.some(r => r.meta.requireAuth)){
 		
 	}
-	console.log(to)
 //	document.title = to.meta.title
 	next();
 })
