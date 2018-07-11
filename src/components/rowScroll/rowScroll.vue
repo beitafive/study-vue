@@ -83,6 +83,7 @@
 				let itemCenter = itemLeft + itemWidth / 2;
 				//获取scroll最大距离
 				let scrollMax = this.Vscroll.maxScrollX;
+				console.log(this.Vscroll)
 				//获取可滚动最大距离
 				let maxTrans = -scrollMax + wrapWidth / 2;
 				if(itemCenter < wrapWidth / 2){
