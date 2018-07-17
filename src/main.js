@@ -6,7 +6,7 @@ import router from './router'
 import store from './store/store'
 import http from './http'
 import vHas from './directive/vhas'
-
+import VueLazyLoad from 'vue-lazyload'
 Vue.prototype.$http = http;
 Vue.mixin({
 	created:function(){	
@@ -15,7 +15,10 @@ Vue.mixin({
 		}
 	}
 })
-
+Vue.use(VueLazyLoad,{
+	loading:'./static/loading.png',
+	error:'./static/loading.png'
+})
 Vue.use(vHas)
 Vue.config.productionTip = false;
 

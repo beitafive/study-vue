@@ -7,6 +7,9 @@
 				{{item}}
 			</div>
 		</transition-group>
+		<div v-for="item in 10">
+			<img v-lazy="item" >
+		</div>
 	</div>
 </template>
 
